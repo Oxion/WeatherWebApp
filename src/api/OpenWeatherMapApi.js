@@ -1,4 +1,5 @@
 var ParameterCheck = require('../util/ParameterCheck.js');
+var RequestQueue = require('../util/RequestQueue.js');
 var request = require('request');
 var querystring = require('querystring');
 
@@ -9,6 +10,8 @@ function OpenWeatherMapApi(options) {
     this.apiKey_ = options.apiKey;
 }
 
+var requestQueue = new RequestQueue();
+
 OpenWeatherMapApi.baseUrl = "http://api.openweathermap.org/data/2.5/weather";
 
 OpenWeatherMapApi.prototype.getByCityName = function (cityName, countryCode) {
@@ -17,7 +20,7 @@ OpenWeatherMapApi.prototype.getByCityName = function (cityName, countryCode) {
             q: `${cityName || ""}${countryCode ? "," + countryCode : ""}`
         });
 
-        request(url, this.getResponseHandler_(resolve , reject));
+        requestQueue.runUsingQueue(url, this.getResponseHandler_(resolve , reject));
     });
 }
 
@@ -27,7 +30,7 @@ OpenWeatherMapApi.prototype.getByCityId = function (cityId) {
             id: cityId
         });
 
-        request(url, this.getResponseHandler_(resolve, reject));
+        requestQueue.runUsingQueue(url, this.getResponseHandler_(resolve , reject));
     });
 }
 
@@ -38,7 +41,7 @@ OpenWeatherMapApi.prototype.getByGeoCoords = function (lat, lon) {
             lon: lon
         });
 
-        request(url, this.getResponseHandler_());
+        requestQueue.runUsingQueue(url, this.getResponseHandler_(resolve , reject));
     });
 }
 
