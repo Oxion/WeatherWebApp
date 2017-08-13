@@ -1,0 +1,11 @@
+<!--The content below is only a placeholder and can be replaced.-->
+<div class="titlebar" style="text-align:center">
+  <div class="app-name">WeatherApp</div>
+  <div class="content">
+    <div *ngIf="isLoggedIn" (click)="onLogout()" class="logout-btn">Logout</div>
+  </div>
+</div>
+<div class="app-content">
+  <router-outlet></router-outlet>
+</div>
+

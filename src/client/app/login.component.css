@@ -1,0 +1,63 @@
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .header {
+    color: white;
+    font-size: 20px;
+    padding: 16px 0px;
+    width: 100%;
+}
+
+form .content {
+    display: flex;
+    flex-direction: column;
+}
+
+form .content .form-row {
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0px;
+}
+
+form .content .form-row .label {
+    padding: 5px 0px;
+    font-size: 14px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+form .content .form-row input {
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 5px;
+    padding: 5px 16px;
+    font-size: 20px;
+    font-family: monospace;
+    background-color: transparent;
+    color: rgba(255, 255, 255, 0.84);
+    outline: none;
+}
+
+form .footer {
+    display: flex;
+    margin-top: 30px;
+}
+
+form .footer button {
+    border: none;
+    padding: 12px;
+    border-radius: 5px;
+    width: 100%;
+    background-color: rgb(255, 255, 255);
+    color: #6b86d0;
+    font-family: monospace;
+    font-size: 20px;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    cursor: pointer;
+}
+
+form .footer button[disabled] {
+    box-shadow: none;
+    color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(255, 255, 255, 0.3);
+}

@@ -1,0 +1,7 @@
+<div *ngIf="isQuering" class="loader">
+    <div class="spinner"></div>
+</div>
+<div *ngIf="message" class="message">{{message}}</div>
+<div *ngIf="!isQuering && weatherData">
+    <weather-renderer [weatherData]="weatherData"></weather-renderer>
+</div>

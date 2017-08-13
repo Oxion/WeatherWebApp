@@ -1,0 +1,7 @@
+<div class="search-box-wrapper">
+    <div class="search-box">
+        <input (keyup)="onKeyUp($event)" [(ngModel)]="query" type="text" placeholder="Enter city name" />
+        <div  (click)="onFind()" class="btn">Find</div>
+    </div>
+</div>
+<router-outlet></router-outlet>

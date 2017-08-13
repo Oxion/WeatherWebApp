@@ -1,0 +1,31 @@
+.titlebar {
+    display: flex;
+    flex-shrink: 0;
+}
+
+.titlebar .app-name {
+    color: white;
+    font-size: 24px;
+    padding: 16px;
+}
+
+.titlebar .content {
+    display: flex;
+    flex-direction: row-reverse;
+    flex-grow: 1;
+    align-items: center;
+}
+
+.titlebar .content .logout-btn {
+    padding: 16px;
+    color: rgba(255, 255, 255, 0.5);
+    cursor: pointer;
+}
+
+.app-content {
+    display: flex;
+    flex-grow: 1;
+    flex-shrink: 0;
+    justify-content: center;
+    align-items: center;
+}

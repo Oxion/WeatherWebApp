@@ -1,0 +1,30 @@
+.search-box-wrapper {
+    text-align: center;
+}
+
+.search-box {
+    background-color: white;
+    border: none;
+    border-radius: 5px;
+    padding-right: 16px;
+    font-family: 'Noto Sans';
+    display: inline-block;
+}
+
+.search-box input {
+    border: none;
+    font-family: 'Noto Sans';
+    font-size: 16px;
+    padding: 16px;
+    background-color: transparent;
+    outline: none;
+}
+
+.search-box .btn {
+    display: inline-block;
+    padding: 5px;
+    background-color: #6b86d0;
+    color: white;
+    border-radius: 5px;
+    cursor: pointer;
+}

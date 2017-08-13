@@ -1,0 +1,36 @@
+<div class="renderer">
+    <div class="general">
+        <div class="location">{{displayData.location.name}}</div>
+        <div class="temp">
+            <div class="value">{{displayData.temp.value}}</div>
+            <div class="unit">{{displayData.temp.unit}}</div>
+        </div>
+        <div class="description">{{displayData.description}}</div>
+    </div>
+    <div class="detail">
+        <div class="section">
+            <div class="label">Pressure</div>
+            <div class="value-wrapper">
+                <div class="value">{{displayData.pressure.value}}</div>
+                <div class="unit">{{displayData.pressure.unit}}</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="label">Humidity</div>
+            <div class="value-wrapper">
+                <div class="value">{{displayData.humidity.value}}</div>
+                <div class="unit">{{displayData.humidity.unit}}</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="label">Wind</div>
+            <div class="value-wrapper">
+                <div class="value">{{displayData.wind.speed.value}}</div>
+                <div class="unit">{{displayData.wind.speed.unit}}</div>
+            </div>
+            <div class="value-wrapper">
+                <div class="value">{{displayData.wind.direction}}</div>
+            </div>
+        </div>
+    </div>
+<div>
